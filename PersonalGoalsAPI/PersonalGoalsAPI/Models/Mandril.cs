@@ -6,6 +6,6 @@
         public string Name { get; set; } = string.Empty;
         public string LastName { get; set; } = string.Empty;
 
-        public List <Skills>? Skills { get; set; }
+        public List<Skills>? Skills { get; set; } = new List<Skills>();
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PersonalGoalsAPI.Helpers;
 using PersonalGoalsAPI.Models;
 using PersonalGoalsAPI.Services;
 
@@ -8,6 +9,7 @@ namespace PersonalGoalsAPI.Controllers
     [Route("api/[controller]")]
     public class MandrilController : ControllerBase
     {
+       
         [HttpGet]
         public ActionResult <IEnumerable<Mandril>> GetMandriles()
         {
@@ -20,7 +22,7 @@ namespace PersonalGoalsAPI.Controllers
 
             if (mandril == null)
             {
-                return NotFound("El mandril solicitado no existe");
+                return NotFound(Messages.Mandril.NotFound);
             }
             return Ok(mandril);
         }
@@ -49,7 +51,7 @@ namespace PersonalGoalsAPI.Controllers
 
             if (mandril == null)
             {
-                return NotFound("El mandril solicitado no existe");
+                return NotFound(Messages.Mandril.NotFound);
             }
             mandril.Name = mandrilInsert.Name;
             mandril.LastName = mandrilInsert.LastName;
@@ -61,7 +63,7 @@ namespace PersonalGoalsAPI.Controllers
             var mandril = MandrilDataStore.Current.Mandriles.FirstOrDefault(x => x.Id == mandrilId);
             if (mandril == null)
             {
-                return NotFound("El mandril solicitado no existe");
+                return NotFound(Messages.Mandril.NotFound);
             }
             MandrilDataStore.Current.Mandriles.Remove(mandril);
             return NoContent();
