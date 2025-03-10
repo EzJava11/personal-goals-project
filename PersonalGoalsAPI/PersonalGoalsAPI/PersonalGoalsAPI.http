@@ -1,6 +1,6 @@
-@PersonalGoalsAPI_HostAddress = http://localhost:5083
+@PersonalGoalsApi_HostAddress = http://localhost:5189
 
-GET {{PersonalGoalsAPI_HostAddress}}/weatherforecast/
+GET {{PersonalGoalsApi_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
