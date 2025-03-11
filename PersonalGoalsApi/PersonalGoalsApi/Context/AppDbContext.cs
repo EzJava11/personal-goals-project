@@ -10,5 +10,6 @@ namespace PersonalGoalsApi.Context
             
         }
         public DbSet<Goal> Goals { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }
