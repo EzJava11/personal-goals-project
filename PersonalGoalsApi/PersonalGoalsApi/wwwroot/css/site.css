@@ -1,2 +1,45 @@
-﻿body {
+﻿body{
+    background-color:lightgray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#pageTitle{
+    margin: auto;
+    width: 350px;
+    height: 100px;
+    text-align: center;
+
+}
+#formDiv{
+    border:  1px solid black;
+    background-color: gray;
+    text-align: center;
+    width: 500px;
+    height: 250px;
+    margin: auto;
+    margin-top: auto;
+    padding-top: 25px;
+    padding-bottom: 50px;
+    border-radius: 5px;
+    box-shadow: -1px 3px 5px black;
+}
+
+#formDiv input{
+    box-shadow: -3px 3px 1px black;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#formDiv a{
+    display: inline;
+    border: 0.5px solid black;
+    text-decoration: none;
+    color: white;
+    background-color: darkslategray;
+    padding: 1px;
+    font-weight: bold;
+    box-shadow: -3px 3px 1px black;
+}
+table{
+    margin: auto;
 }
