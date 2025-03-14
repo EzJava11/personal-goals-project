@@ -1,29 +1,38 @@
-﻿document.getElementById("loginButton").addEventListener("click", async (event) {
-    event.preventDefault(); // Prevenir que el formulario se envíe y recargue la página
+﻿const uri = 'api/Users';
 
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
+let user = document.getElementById("user").textContent
+let pass = document.getElementById("pass").textContent
 
-    try {
-        const response = await fetch("https://localhost:7239/api/User", { // Asegura que el puerto es el correcto
+const item = {
+    nickname: user,
+    password: pass
+}
+
+
+    document.getElementById("logIn").addEventListener("submit", async function (event) {
+        event.preventDefault()
+
+        const response =  fetch(uri, {
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                'Accept': "aplication/json",
+                "Content-Type":"aplication/json"
             },
-            body: JSON.stringify({ username, password })
+            body: JSON.stringify({
+                item
+            })
         })
-
-        const data = await response.json();
-
         if (response.ok) {
-            console.log("Inicio de sesión exitoso");
-            localStorage.setItem("token", data.token); // Guardar token en Local Storage
-            window.location.href = "home.html"; // Redirigir al usuario
+            const data = await response.json()
+            console.log("Usuario validado correctamente: ", data)
         } else {
-            alert("Error: " + data.message);
+            console.log("Error en la valiacion del usuario: ", response.status)
+            alert("Credenciales incorrectas. Vuelva a intentarlo")
         }
-    } catch (error) {
-        console.error("Error en la solicitud:", error);
-        alert("Hubo un error en la conexión con el servidor.");
-    }
-});
+    })
+    fetch(uri)
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error('unable get items', error))
+
+
