@@ -83,6 +83,21 @@ namespace PersonalGoalsApi.Controllers
 
             return CreatedAtAction("GetUser", new { id = user.Id }, user);
         }
+        
+        // ✅ Iniciar sesión (validar usuario y contraseña)
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([FromBody] User request)
+        {
+            var user = await _context.Users
+                .FirstOrDefaultAsync(u => u.Nickname == request.Nickname && u.Password == request.Password);
+
+            if (user == null)
+            {
+                return Unauthorized(new { message = "Credenciales incorrectas" });
+            }
+
+            return Ok(new { message = "Inicio de sesión exitoso", userId = user.Id, nickname = user.Nickname });
+        }
 
         // DELETE: api/Users/5
         [HttpDelete("{id}")]

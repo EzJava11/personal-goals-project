@@ -3,14 +3,14 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>CRUD</title>
-    <link rel="stylesheet" href="css/site.css" />
+    <title>Sign In</title>
+    <link rel="stylesheet" href="../css/site.css" />
 </head>
 
 <body>
     <header id="pageTitle">
         <div>
-            <h1 >PERSONAL GOALS</h1>
+            
         </div>
     </header>
 
@@ -19,34 +19,39 @@
             <table>
                 <tr>
                     <th>
-                        <h1>Inicio de sesión</h1>
+                        <h1>Registrate</h1>
                     </th>
                 </tr>
                 <tr>
                     <td>
-                        <input type="text" placeholder="Ingrese su Usuario" id="user" required/>
+                        <input type="text" placeholder="Ingrese su Correo" id="user" required />
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="password" placeholder="Ingrese su Contraseña" id="pass" required/>
+                        <input type="text" placeholder="Ingrese su Usuario" id="user" required />
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="submit" value="Ingresar" id="send" />
+                        <input type="password" placeholder="Ingrese su Contraseña" id="pass" required />
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <a href="html/signIn.html">Registrarse</a>
+                        <input type="submit" value="registrarse" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="estadoRegistro"></span>
                     </td>
                 </tr>
             </table>
         </form>
     </div>
 
-    <script src="js/site.js"></script>
+    <script src="../js/signIn.js"></script>
 </body>
 
 </html>
