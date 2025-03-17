@@ -2,10 +2,6 @@
 
 function SignIn(event) {
     event.preventDefault()
-
-    //let email = document.getElementById("email").value
-    //let user = document.getElementById("user").value
-    //let pass = document.getElementById("pass").value
     const item = {
         email : document.getElementById("email").value,
         nickname : document.getElementById("user").value,
@@ -16,7 +12,6 @@ function SignIn(event) {
         const response = await fetch(uri, {
             method: 'POST',
             headers: {
-                /*"Accept" : "aplication/json",*/
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(item)
@@ -24,10 +19,15 @@ function SignIn(event) {
         const data = await response.json()
 
         if (response.ok) {
-            console.log("Registro satisfactorio", data)
-        }
-        else {
-            console.log("Error", data.message)
+            let mensaje = "✅ Inicio de sesión exitoso:"
+            console.log(mensaje, data);
+            document.getElementById("status").textContent = mensaje
+            window.location.href = "html/home.html"
+        } else {
+            let mensaje = "❌ Error:"
+            console.log(mensaje, data.message);
+            document.getElementById("status").textContent = mensaje
+
         }
     }
     signIn()

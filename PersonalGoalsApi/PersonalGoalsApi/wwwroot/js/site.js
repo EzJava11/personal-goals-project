@@ -17,10 +17,15 @@ function LogIn(event) {
         const data = await response.json();
 
         if (response.ok) {
-            console.log("✅ Inicio de sesión exitoso:", data);
+            let mensaje = "✅ Inicio de sesión exitoso:"
+            console.log(mensaje, data);
+            document.getElementById("estado").textContent = mensaje
             window.location.href ="html/home.html"
         } else {
-            console.log("❌ Error:", data.message);
+            let mensaje = "❌ Error:"
+            console.log(mensaje, data.message);
+            document.getElementById('estado').textContent = mensaje
+
         }
     };
     login()
