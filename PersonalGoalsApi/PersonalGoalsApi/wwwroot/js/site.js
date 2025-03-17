@@ -22,9 +22,9 @@ function LogIn(event) {
             document.getElementById("estado").textContent = mensaje
             window.location.href ="html/home.html"
         } else {
-            let mensaje = "❌ Error:"
+            let mensaje = "❌ Error: las credenciales no son validas"
             console.log(mensaje, data.message);
-            document.getElementById('estado').textContent = mensaje
+            document.getElementById("estado").textContent = mensaje
 
         }
     };

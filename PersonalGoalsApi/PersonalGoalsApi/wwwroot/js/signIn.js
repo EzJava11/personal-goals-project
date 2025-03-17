@@ -22,9 +22,11 @@ function SignIn(event) {
             let mensaje = "✅ Inicio de sesión exitoso:"
             console.log(mensaje, data);
             document.getElementById("status").textContent = mensaje
-            window.location.href = "html/home.html"
+            alert("Creacion de usuario exitosa")
+            window.location.href = "../index.html"
+            
         } else {
-            let mensaje = "❌ Error:"
+            let mensaje = "❌ Error: credenciales no validas"
             console.log(mensaje, data.message);
             document.getElementById("status").textContent = mensaje
 
