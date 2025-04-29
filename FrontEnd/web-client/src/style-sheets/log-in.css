@@ -1,0 +1,37 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;   
+    margin: 0 auto; 
+}
+.input{
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+.signIn-button{
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    background-color: #021024;
+    color: white;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+.signIn-button:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #021024;
+}

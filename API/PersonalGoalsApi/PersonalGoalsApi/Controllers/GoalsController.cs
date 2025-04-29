@@ -20,13 +20,21 @@ namespace PersonalGoalsApi.Controllers
         {
             _context = context;
         }
+        [HttpGet]
+        public IActionResult Get()
+        {
+            return Ok(new[] {
+                new { id = 1, titulo = "Aprender React", completado = false },
+                new { id = 2, titulo = "Conectar con API", completado = true }
+            });
+        }
 
         // GET: api/Goals
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Goal>>> GetGoals()
-        {
-            return await _context.Goals.ToListAsync();
-        }
+        // [HttpGet]
+        // public async Task<ActionResult<IEnumerable<Goal>>> GetGoals()
+        // {
+        //     return await _context.Goals.ToListAsync();
+        // }
 
         // GET: api/Goals/5
         [HttpGet("{id}")]

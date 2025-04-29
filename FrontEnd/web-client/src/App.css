@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    color: white;
+    /* background-color: #1b1b32; */
+    background-image: url('./img/loginBackground.png');
+    background-repeat: no-repeat;       /* Evita que se repita */
+    background-size: cover;             /* Cubre todo el área */
+    background-position: center center; /* Centra la imagen */
+    background-attachment: fixed;       /* Fondo fijo al hacer scroll */
+    font-family: Lato, sans-serif;
+}
+.logo-container{
+    width: 100%;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.app-logo{
+    width: 50%;
+    height: auto;
+}
+.login-app{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.main-container{
+    width: 500px;
+    height: 250px;
+    /* background-color: #5483b3; */
+    background: rgba(255, 255, 255, 0.02);     /* Semitransparente */
+    backdrop-filter: blur(10px);              /* Desenfoque */
+    -webkit-backdrop-filter: blur(10px);      /* Soporte para Safari */
+    padding: 25px;
+    margin: 10px;
+    justify-content: center;
+    border-radius: 26px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}

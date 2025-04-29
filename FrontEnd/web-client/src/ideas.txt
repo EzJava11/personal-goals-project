@@ -1,0 +1,3 @@
+¡¡¡Archivo de texto exclusivo para escribir las cosas que se me vayan ocurriendo implementar en el proyecto!!!
+
+-Animacion de inicio de sesion con el nombre del usuario dandole la bienvenida a la aplicacion
