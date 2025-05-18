@@ -96,7 +96,7 @@ namespace PersonalGoalsApi.Controllers
                 return Unauthorized(new { message = "Credenciales incorrectas" });
             }
 
-            return Ok(new { message = "Inicio de sesión exitoso", userId = user.Id, nickname = user.Nickname });
+            return Ok(new { message = "Inicio de sesión exitoso", userId = user.Id, nickname = user.Nickname});
         }
 
         // DELETE: api/Users/5

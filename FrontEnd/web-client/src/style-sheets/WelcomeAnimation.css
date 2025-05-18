@@ -1,0 +1,24 @@
+.welcome-screen {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0d1b2a; /* azul oscuro */
+  color: white;
+}
+
+.slide-in {
+  font-size: 2.5rem;
+  animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
